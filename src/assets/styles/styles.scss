@@ -1,0 +1,7 @@
+// This is the file that gets imported in the main page and contains all general
+// style definitions, it allows to divide styles by using files known as
+// 'partials', wich are the files whose names start with an underscore,
+// example: ('_colors.scss'). This file puts together all the partials needed
+// with the '@forward' keyword and uses them when it is imported
+@forward './globals';
+@forward './utils';

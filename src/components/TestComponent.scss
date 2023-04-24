@@ -1,0 +1,33 @@
+// As you can see, it is really easy to keep track of a component's
+// style if it gets defined in a file with the same name as the component's
+// filename
+.testClass {
+  // This is the way you use a css variable:
+  background-color: var(--testBlue);
+
+  // Something you can do with scss that you cannot do with css is
+  // nesting, as below:
+  & button {
+    background-color: var(--primaryColor-300);
+  }
+
+  // You can also nest the media queries:
+  @media (max-width: 1000px) {
+    // If you make the page smaller than 1000px, the component's background
+    // will change color. This type of style changes done based on the
+    // screen's width or height is the basis of responsive design
+    background-color: var(--secondaryColor-300);
+  }
+
+  //TODO: make a mixin for the media-queries
+  // If the code editor/IDE you use has some comment addons,
+  // the above coment should be highlighted somehow. This type of comments
+  // are really useful for other's to know if something is not fully
+  // done yet, or to work as a reminder for yourself in case you need to
+  // change something later on
+
+  // If you are using VSCode as your code editor, I highly recommend
+  // installing the following extensions: 
+  // * 'Better Comments' --> Highlights different type of comments based on the keyword used at the beggining (ex: TODO)
+  // * 'Todo Tree' --> Shows in the folder structure, where TODO comments are
+}
